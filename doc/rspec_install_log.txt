@@ -1,0 +1,7 @@
+C:\sbox\ruby\Sites\R3InAction\App\Ticketee>rails generate rspec:install
+
+"===== See me in C:\RailsInstaller\Ruby1.9.3\bin\rails ====="
+
+      create  .rspec
+      create  spec
+      create  spec/spec_helper.rb
