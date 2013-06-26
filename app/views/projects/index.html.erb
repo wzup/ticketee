@@ -1,5 +1,9 @@
 <%= link_to "New Project", new_project_path %>
 
+<h3 id="info">
+  <%= flash[:notice] -%> 
+</h3>
+
 <h2>Projects</h2>
 <ul>
   <% @projects.each do |p| -%>

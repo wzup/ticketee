@@ -1,0 +1,10 @@
+<h2>EDIT Project</h2>
+
+<h3 id="info">
+  <%= flash[:alert] -%>
+  <% if(flash[:msg]) -%> 
+    <%= "Name #{flash[:msg]}" -%>
+  <% end -%> 
+</h3>
+
+<%= render(:partial => "form") -%>

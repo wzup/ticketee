@@ -4,15 +4,16 @@ Given(/^(?:I) am on (.+)$/) do |page_name|
   visit(path_to(page_name))
 end
 
-When(/^I follow (\"New Project\")$/) do |page_name|
-  visit(path_to(page_name))
-end
+# When(/^I follow (\"New Project\")$/) do |page_name|
+#   visit(path_to(page_name))
+# end
 
 # 
 #   Scenario: Creating a project
 #   
 When(/^I fill in "(.*?)" with "(.*?)"$/) do |arg1, arg2|
   # puts "#{page.html.inspect}"
+  # puts page.html
   fill_in(arg1, :with => arg2)
 end
 

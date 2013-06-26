@@ -1,4 +1,12 @@
-<form action="<%= projects_path -%>" method="post" accept-charset="utf-8">
+<!-- <form action="<%= projects_path -%>" method="post" accept-charset="utf-8">
   <input type="text" name="name" />
   <input type="submit" name="submit" value="Create Project">
-</form>
+</form> -->
+
+<%= form_for(@project) do |f| -%> 
+  <p>
+    <%= f.label(:name) -%> 
+    <%= f.text_field(:name) -%> 
+  </p>
+  <%= f.submit -%> 
+<% end -%> 
