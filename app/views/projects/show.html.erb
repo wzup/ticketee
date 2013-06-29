@@ -1,8 +1,18 @@
-<h2>SHOW: <%= @project.name %></h2>
+<h2><%= @project.name %></h2>
+<span style="margin-top: 5px; display: inline-block;"><small>вьюха: projects/show</small></span>
+<br>
+<br>
 
-<h3 id="info">
-  <%= flash[:notice] -%> 
-</h3>
+<span><%= link_to("Edit Project", edit_project_path(@project)) -%></span>
+<span><%= link_to("Delete Project", project_path(@project), :method => :delete, :confirm => "Are you sure?") -%></span>
+<span><%= link_to("New Ticket", new_project_ticket_path(@project)) -%></span>
+<br>
+<br>
 
-<div><%= link_to("Edit Project", edit_project_path(@project)) -%></div>
-<div><%= link_to("Delete Project", project_path(@project), :method => :delete, :confirm => "Are you sure?") -%></div>
+<ul id="tickets">
+  <% @project.tickets.each do |ticket| -%> 
+    <li>
+      #<%= ticket.id %> - <%= link_to ticket.title, [@project, ticket] %>
+    </li>
+  <% end -%> 
+</ul>

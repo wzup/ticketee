@@ -7,7 +7,7 @@ end
 # When(/^I follow (\"New Project\")$/) do |page_name|
 #   visit(path_to(page_name))
 # end
-
+# "([A-Za-z\!\#\.0-9\s*]*?)"
 # 
 #   Scenario: Creating a project
 #   
@@ -21,9 +21,9 @@ When(/^I press "(.*?)"$/) do |arg1|
   click_on(arg1)
 end
 
-Then(/^I should see "(.*?)"$/) do |arg1|
-  page.should have_content(arg1)
-  # puts "#{page.html.inspect}"
+Then(/^I should see "(.*?)"$/) do |*args|
+  puts "#{page.html}"
+  page.should have_content(args[0])
   # puts "\n\n"
   # find('#info').should(have_content(arg1))
   # puts "#{page.html.inspect}\n"

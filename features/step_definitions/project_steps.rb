@@ -1,7 +1,7 @@
 # coding: utf-8
 
 Given(/^There is a project called "(.*?)"$/) do |arg1|
-  FactoryGirl.create(:project, :name => arg1)
+  @project = FactoryGirl.create(:project, :name => arg1)
 end
 
 When(/^I follow "(.*?)"$/) do |arg1|
